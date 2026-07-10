@@ -73,7 +73,7 @@ app.delete("/fortunes/:id", async (req, res) => {
 });
 mongoose
   .connect(
-    "mongodb+srv://admin:Admin@backenddb.uitoho2.mongodb.net/Node-API?appName=BackendDB",
+    "mongodb+srv://admin:<db_password>@backenddb.uitoho2.mongodb.net/?appName=BackendDB",
   )
   .then(() => {
     console.log("Connected to database!");
