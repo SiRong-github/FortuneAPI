@@ -4,7 +4,8 @@ const FortuneSchema = mongoose.Schema(
     id: {
       type: Number,
       required: [true, "Please enter id."],
-      default: 0,
+      unique: [true, "Id already exists"],
+      min: [1, "Id should start from 0"],
     },
     content: {
       type: String,
