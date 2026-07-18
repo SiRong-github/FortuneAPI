@@ -12,10 +12,6 @@ app.use(express.urlencoded({ extended: false }));
 /** Routes */
 app.use("/fortunes", FortuneRoute);
 
-app.get("/", (req, res) => {
-  res.send("Hello from Node API Server updated");
-});
-
 /* Connects to MongoDB */
 mongoose
   .connect(process.env.MONGO_URI)
